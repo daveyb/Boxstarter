@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>WorkPC</id>
+    <version>1.0.0</version>
+    <authors>PCAdmin</authors>
+    <owners>PCAdmin</owners>
+    <description>Provision a new PC for use at work</description>
+    <tags>Boxstarter</tags>
+  </metadata>
+</package>
