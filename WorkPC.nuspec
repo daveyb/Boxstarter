@@ -3,8 +3,8 @@
   <metadata>
     <id>WorkPC</id>
     <version>1.0.0</version>
-    <authors>PCAdmin</authors>
-    <owners>PCAdmin</owners>
+    <authors>David Benedic</authors>
+    <owners>David Benedic</owners>
     <description>Provision a new PC for use at work</description>
     <tags>Boxstarter</tags>
   </metadata>
