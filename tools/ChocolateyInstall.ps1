@@ -50,8 +50,8 @@ try {
        curl -O $_
    })
    
-   
     Write-ChocolateySuccess 'WorkPC'
+    Invoke-Reboot
 } catch {
   Write-ChocolateyFailure 'WorkPC' $($_.Exception.Message)
   throw
