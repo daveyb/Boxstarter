@@ -5,10 +5,6 @@ try {
     # Windows Settings
     Set-ExplorerOptions -showProtectedOSFiles -showFileExtensions
     
-    # OneGet Config
-    Install-Package -Provider bootstrap NuGet
-    Install-Package -Provider bootstrap chocolatey
-    
     # Chocolatey Packages
     $c =
         "visualstudiocode",
@@ -33,12 +29,6 @@ try {
        cinst $_ -y -source windowsFeatures
    })
    
-   # Powershell Modules
-   Install-Module AzureRM
-   Install-AzureRM
-   Install-Module Azure
-   Import-AzureRM
-   
    # Download Powershell Modules 
    cd $env:HOMEPATH\Downloads
    $m =
@@ -50,8 +40,17 @@ try {
        curl -O $_
    })
    
+   # OneGet Config
+   Install-Package -Provider bootstrap NuGet
+   Install-Package -Provider bootstrap chocolatey
+   
+   # Powershell Modules
+   Install-Module AzureRM
+   Install-AzureRM
+   Install-Module Azure
+   Import-AzureRM
+   
     Write-ChocolateySuccess 'WorkPC'
-    Invoke-Reboot
 } catch {
   Write-ChocolateyFailure 'WorkPC' $($_.Exception.Message)
   throw
